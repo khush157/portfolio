@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Expense Tracker</title>
+  <link rel="stylesheet" href="styles3.css"/>
+</head>
+<body>
+  <div class="tracker">
+    <h2>Expense Tracker</h2>
+    <form id="expense-form">
+      <div class="form-group">
+        <input type="text" id="title" placeholder="Expense Title" required />
+      </div>
+      <div class="form-group">
+        <input type="number" id="amount" placeholder="Amount" step="0.01" required />
+      </div>
+      <div class="form-group">
+        <select id="category" required>
+          <option value="" disabled selected>Select Category</option>
+          <option>Food</option>
+          <option>Transport</option>
+          <option>Entertainment</option>
+          <option>Utilities</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <input type="date" id="date" required />
+      </div>
+      <button type="submit" class="btn add-btn">Add Expense</button>
+    </form>
+
+    <div class="stats">
+      <span>Total:</span>
+      <span class="total-amount" id="total">₹0.00</span>
+    </div>
+
+    <ul class="expense-list" id="expense-list">
+      <!-- Dynamically injected -->
+    </ul>
+  </div>
+
+  <script src="exp.js"></script>
+</body>
+</html>
